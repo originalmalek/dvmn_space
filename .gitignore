@@ -108,7 +108,11 @@ env/
 venv/
 ENV/
 env.bak/
-venv.bak/
+venv.b/ak/
+images/
+config/
+images_resized/
+resize image.py/
 
 # Spyder project settings
 .spyderproject
