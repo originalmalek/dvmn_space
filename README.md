@@ -4,7 +4,7 @@ Download photos from hubble api and spaceX api. Upload the photo to instagram us
 
 # Description
 The code: 
-1. Download photos from hubble collection and from lastest SpaceX launch
+1. Download photos from hubble collection and from lastest SpaceX launch by API
 2. Post the photos to instagram.
 
 The project use:
