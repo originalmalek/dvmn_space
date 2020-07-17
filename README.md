@@ -7,7 +7,7 @@ The code:
 1. Download photos from hubble collection and from lastest SpaceX launch by API
 2. Post the photos to instagram.
 
-The project use:
+The project use:  
 [Instagram](https://instagram.com)  
 [SpaceX API](https://github.com/r-spacex/SpaceX-API)  
 [Hubble telescope API](http://hubblesite.org/api/documentation)  
