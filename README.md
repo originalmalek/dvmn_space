@@ -37,6 +37,9 @@ pip install -r requirements.txt
 
 Install requirements  
 Open and run 'main.py'
+```
+python main.py	
+```
 
 
 # Additional information
