@@ -22,10 +22,10 @@ USERNAME_INSTA = your_instagram_login
 PASS_INSTA = your_instagram_password
 ```
 
-Modules:
-'requests 2.24.0'  
-'python-dotenv 0.14.0'
-'instabot 0.117.0'
+Modules:  
+'requests 2.24.0'   
+'python-dotenv 0.14.0'  
+'instabot 0.117.0'  
 
 For installing the modules use command
 ```
@@ -40,7 +40,7 @@ Open and run 'main.py'
 
 
 # Additional information
-For downloading another collection from hubble change variable 'collection_name' in main() function
+For downloading another collection from hubble change variable 'collection_name' in main() function   
 Existing collections: "holiday_cards", "wallpaper", "spacecraft", "news", "printshop", "stsci_gallery"
 
 # Project goal
