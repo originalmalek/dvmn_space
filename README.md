@@ -8,15 +8,13 @@ The code:
 2. Post the photos to instagram.
 
 The project use:
-[https://instagram.com](instagram)  
-[https://github.com/r-spacex/SpaceX-API](SpaceX API)  
-[http://hubblesite.org/api/documentation](Hubble telescope API)  
+[Instagram](https://instagram.com)  
+[SpaceX API](https://github.com/r-spacex/SpaceX-API)  
+[Hubble telescope API](http://hubblesite.org/api/documentation)  
 
 
 # Requirements
 Python >=3.7
-
-Api token from [bitly.com](https://dev.bitly.com/get_started.html)
 
 Create file '.env' and add the code
 ```
