@@ -8,9 +8,9 @@ The code:
 2. Post the photos to instagram.
 
 The project use:
-[https://instagram.com](instagram)
-[https://github.com/r-spacex/SpaceX-API](SpaceX API)
-[http://hubblesite.org/api/documentation](Hubble telescope API)
+[https://instagram.com](instagram)  
+[https://github.com/r-spacex/SpaceX-API](SpaceX API)  
+[http://hubblesite.org/api/documentation](Hubble telescope API)  
 
 
 # Requirements
