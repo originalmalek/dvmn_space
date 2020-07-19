@@ -61,7 +61,7 @@ def resize_photos():
     for file_name in file_names:
         image = Image.open(os.path.join('images', file_name)).convert('RGB')
         image.thumbnail((1075, 1075))
-        image.save(os.path.join(directory, file_name.split('.')[0] + '.jpg'), format='JPEG', )
+        image.save(os.path.join(directory, file_name.split('.')[0] + '.jpg'), format='JPEG')
 
 
 def post_photo_instagram():
