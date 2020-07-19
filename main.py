@@ -15,12 +15,10 @@ def get_picture_from_url(url, filename, file_format):
     response.raise_for_status()
 
     directory = 'images'
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    os.makedirs(directory, exist_ok=True)
 
     with open(os.path.join(directory, filename + file_format), 'wb') as file:
         file.write(response.content)
-    print('pic downloaded')
 
 
 def fetch_spacex_last_launch():
@@ -33,8 +31,7 @@ def fetch_spacex_last_launch():
 
 
 def get_file_format(link):
-    file_format = link.split('.')[-1]
-    return '.' + file_format
+    return os.path.splitext(link)[-1]
 
 
 def fetch_hubble(id):
@@ -46,31 +43,24 @@ def fetch_hubble(id):
     get_picture_from_url(link, 'hubble_' + str(id),  get_file_format(link))
 
 
-def get_ids_hubble_collections(url):
+def get_ids_hubble_collections():
+    collection_name = 'holiday_cards'
+    url = f'http://hubblesite.org/api/v3/images?collection_name={collection_name}'
     response = requests.get(url).json()
 
-    for i in range(len(response)):
-        fetch_hubble(response[i]['id'])
+    for image_info in response:
+        fetch_hubble(image_info['id'])
 
 
 def resize_photos():
     file_names = os.listdir(path=os.path.join('images'))
     directory = 'images_resized'
 
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    os.makedirs(directory, exist_ok=True)
 
     for file_name in file_names:
         image = Image.open(os.path.join('images', file_name)).convert('RGB')
-        sizes = image.size
-
-        if sizes[0] > sizes[1] and sizes[0] > 1080:
-            image.thumbnail((1075, sizes[1]))
-        elif sizes[1] > sizes[0] and sizes[1] > 1080:
-            image.thumbnail((sizes[0], 1075 ))
-        else:
-            pass
-
+        image.thumbnail((1075, 1075))
         image.save(os.path.join(directory, file_name.split('.')[0] + '.jpg'), format='JPEG', )
 
 
@@ -91,9 +81,8 @@ def post_photo_instagram():
 
 
 def main():
-    collection_name = 'holiday_cards'
     fetch_spacex_last_launch()
-    get_ids_hubble_collections(f'http://hubblesite.org/api/v3/images?collection_name={collection_name}')
+    get_ids_hubble_collections()
     post_photo_instagram()
 
 
