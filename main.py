@@ -61,14 +61,10 @@ def resize_photos():
     for file_name in file_names:
         image = Image.open(os.path.join('images', file_name)).convert('RGB')
         image.thumbnail((1075, 1075))
-        image.save(os.path.join(directory, file_name.split('.')[0] + '.jpg'), format='JPEG')
+        image.save(os.path.join(directory, file_name.split('.')[0] + '.jpg'), format='JPEG', )
 
 
-def post_photo_instagram():
-    load_dotenv()
-    username_insta = os.getenv('USERNAME_INSTA')
-    pass_insta = os.getenv('PASS_INSTA')
-
+def post_photo_instagram(username_insta, pass_insta):
     file_names = os.listdir(path=os.path.join('images_resized'))
 
     bot = Bot()
@@ -81,9 +77,13 @@ def post_photo_instagram():
 
 
 def main():
+    load_dotenv()
+    username_insta = os.getenv('USERNAME_INSTA')
+    pass_insta = os.getenv('PASS_INSTA')
+    
     fetch_spacex_last_launch()
     get_ids_hubble_collections()
-    post_photo_instagram()
+    post_photo_instagram(username_insta, pass_insta)
 
 
 if __name__ == '__main__':
