@@ -48,5 +48,5 @@ Existing collections: "holiday_cards", "wallpaper", "spacecraft", "news", "print
 
 # Project goal
 
-The code was written for educational purpose on online course for Api developers dvmn.org
+The code was written for educational purpose on online course for Api developers [Devman](http://dvmn.org) 
 
