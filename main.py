@@ -43,8 +43,7 @@ def fetch_hubble(id):
     get_picture_from_url(link, 'hubble_' + str(id),  get_file_format(link))
 
 
-def get_ids_hubble_collections():
-    collection_name = 'holiday_cards'
+def get_ids_hubble_collections(collection_name):
     url = f'http://hubblesite.org/api/v3/images?collection_name={collection_name}'
     response = requests.get(url).json()
 
@@ -80,9 +79,11 @@ def main():
     load_dotenv()
     username_insta = os.getenv('USERNAME_INSTA')
     pass_insta = os.getenv('PASS_INSTA')
-    
+
+    collection_name = 'holiday_cards'
+
     fetch_spacex_last_launch()
-    get_ids_hubble_collections()
+    get_ids_hubble_collections(collection_name)
     post_photo_instagram(username_insta, pass_insta)
 
 
