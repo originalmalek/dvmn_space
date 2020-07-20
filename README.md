@@ -43,7 +43,7 @@ python main.py
 
 
 # Additional information
-For downloading another collection from hubble change variable 'collection_name' in get_ids_hubble_collections() function   
+For downloading another collection from hubble change variable 'collection_name' in main() function   
 Existing collections: "holiday_cards", "wallpaper", "spacecraft", "news", "printshop", "stsci_gallery"
 
 # Project goal
